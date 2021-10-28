@@ -1,3 +1,5 @@
+import random
+
 class Character():
     def __init__(self, name, race, alignment):
         self.__name = name
@@ -15,3 +17,8 @@ class Character():
     
     def get_alignment(self):
         return self.__alignment
+
+    def attack(self, weapon, damage):
+        print(f"{self.get_name()} attacks with her {weapon} for {damage} points of damage!\n")
+        attack_hit = random.randint(1, 20)
+        return damage, attack_hit
